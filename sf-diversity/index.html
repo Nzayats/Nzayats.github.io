@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>San Francisco Diversification Potential</title>
+  <meta name="description" content="Analyzing the potential of San Francisco to spend more on diverse vendors">
+  <meta name="author" content="Natalie Zayats, based on the work of Jim Vallandingham">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bubble_chart.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SFGov Diverse Supplier Potential</h1>
+    <h3>The analysis of 2017 <a href="https://data.sfgov.org/City-Management-and-Ethics/Vendor-Payments-Vouchers-/n9pm-xkyq">SFGov spending</a>,
+        combined with <a href="https://sch.thesupplierclearinghouse.com/FrontEnd/SearchCertifiedDirectory.asp">
+        The Supplier Clearinghouse</a> list of certified<br>
+        minority-owned businesses, shows pretty low numbers of diverse suppliers in the City supply chain. <br>
+        The chart below highlights the most potential areas for improvement, where high spending is combined<br>
+        with high supply of diverse vendors.
+    </h3>
+    <div id="toolbar">
+      <a href="#" id="all_num" class="button active">All Types</a>
+      <a href="#" id="veteran_num" class="button">Disabled Veterans</a>
+      <a href="#" id="minority_num" class="button">Minority</a>
+      <a href="#" id="women_num" class="button">Women</a>
+      <a href="#" id="women_minority_num" class="button">Women/Minority</a>
+      <a href="#" id="lgbt_num" class="button">LGBT</a>
+      <a href="#" id="smb_num" class="button">Small Business</a>
+    </div>
+    <div id="vis"></div>
+    <svg width="1000" height="100">
+      <circle cx="40" cy="40" r="30" class="legendcircle"/>
+      <text class="numcomp" x="80" y="45">>$50M</text>
+      <circle cx="220" cy="40" r="15" class="legendcircle"/>
+      <text class="numcomp" x="245" y="45">$10-50M</text>
+      <circle cx="390" cy="40" r="10" class="legendcircle"/>
+      <text class="numcomp" x="410" y="45">$5-10M</text>
+      <circle cx="570" cy="40" r="5" class="legendcircle"/>
+      <text class="numcomp" x="585" y="45">$1-5M</text>
+      <circle cx="750" cy="40" r="2" class="legendcircle"/>
+      <text class="numcomp" x="762" y="45"><$1M</text>
+      <text class="numcomp" x="450" y="80">Size indicates budget spending in 2017</text>
+    </svg>
+  </div>
+
+  <script src="//d3js.org/d3.v4.min.js"></script>
+  <script src="src/tooltip.js"></script>
+  <script src="src/bubble_chart.js"></script>
+</body>
+</html>
